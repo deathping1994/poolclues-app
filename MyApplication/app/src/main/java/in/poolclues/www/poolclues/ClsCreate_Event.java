@@ -101,14 +101,15 @@ public class ClsCreate_Event {
         this.searchable=value;
     }
 
-    private ArrayList<Object> contributor;
-    public ArrayList<Object> getContributor()
+    private JSONArray contributor;
+    public JSONArray getContributor()
     {
-        return  contributor;
+        return contributor;
     }
-    public void setContributor(ArrayList<Object> value)
+    public void setContributor(JSONArray value)
     {
         this.contributor=value;
+
     }
 
     private String contributorsEmailid;

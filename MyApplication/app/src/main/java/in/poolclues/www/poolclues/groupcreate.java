@@ -51,8 +51,6 @@ public class groupcreate extends Activity implements View.OnClickListener {
     String searchable="true";
     private TextView lblmessage;
 
-    ArrayList<Object> j= new ArrayList<Object>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -100,10 +98,16 @@ public class groupcreate extends Activity implements View.OnClickListener {
 
         @Override
         protected String doInBackground(String... urls) {
-
+             JSONArray j=new JSONArray();
             for(int i=0;i<=1;i++) {
-               j.add(GetContributionDetails());
-            }
+               try {
+                   j.put(new JSONObject(GetContributionDetails()));
+               }
+               catch (Exception e)
+               {
+                   System.out.println(e.toString());
+               }
+               }
             ClsCreate_Event clsEvent= new ClsCreate_Event();
             clsEvent.setEmail_id(emailid);
             clsEvent.setEvent_name(txt_event_name.getText().toString());
@@ -148,20 +152,16 @@ public class groupcreate extends Activity implements View.OnClickListener {
     }
 
     public static String ContriDetails(ClsContri clsContri)
-    {
-        String result="";
+    { String result;
         try {
-                String json1;
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.accumulate("email_id" , clsContri.getEmail_id());
                 jsonObject.accumulate("amount" , clsContri.getAmount());
-                json1 = jsonObject.toString();
-                result = json1.toString();
-
+                return jsonObject.toString();
         }
         catch (Exception e)
         {
-            result="ex"+e.toString();
+          result="ex"+e.toString();
 
         }
         return result;
@@ -185,12 +185,15 @@ public class groupcreate extends Activity implements View.OnClickListener {
             jsonObject.accumulate("target_date",clsCreate_event.getTarget_date());
             jsonObject.accumulate("target_amount",clsCreate_event.getTarget_amount());
             jsonObject.accumulate("description",clsCreate_event.getDescription());
-            jsonObject.accumulate("contributors", new JSONArray(clsCreate_event.getContributor()));
+            jsonObject.put("contributors", clsCreate_event.getContributor());
             jsonObject.accumulate("msg",clsCreate_event.getMsg());
             jsonObject.accumulate("authtoken",clsCreate_event.getAuthtoken());
             jsonObject.accumulate("searchable",clsCreate_event.getSearchable());
             json=jsonObject.toString();
-            json=json.replaceAll("\\\\","");
+            System.out.println(json);
+
+//            json=json.replaceAll("\\\\","");
+//            json=json.replaceAll("\\"{,"{");
             StringEntity se= new StringEntity(json);
             httpPost.setEntity(se);
             httpPost.setHeader("Accept","application/json");
