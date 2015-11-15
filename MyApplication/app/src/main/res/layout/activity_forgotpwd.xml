@@ -1,0 +1,102 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="#08253c" >
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="fill_parent"
+                    android:text="@string/lbl_poolclues"
+                    android:textStyle="normal"
+                    android:layout_weight="1"
+                    android:textColor="#f0c80c"
+                    android:textSize="30sp"
+                    android:layout_height="fill_parent" />
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FC0"
+        android:gravity="center" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/lbl_footerline"
+            android:textStyle="italic"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/content"
+        android:background="@drawable/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header" >
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:id="@+id/imglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/headericon"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imglogo"
+            android:text="@string/lbl_username"
+            android:textColor="#ff1429f0"
+            android:id="@+id/lblusername"
+            android:textSize="19sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtuserid"
+            android:textColor="#ff1c1c1c"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/lblusername"
+            android:layout_alignLeft="@id/lblusername"
+            android:background="@drawable/tblborder"  />
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnforgotpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fffbfdff"
+            android:textStyle="bold"
+            android:text="@string/lbl_forgotpassword"
+            android:width="200dp"
+            android:textSize="25sp"
+            android:background="#ff3e92ff"
+            android:layout_below="@id/txtuserid"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

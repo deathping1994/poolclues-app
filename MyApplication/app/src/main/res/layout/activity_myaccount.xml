@@ -1,0 +1,251 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:background="#08253c" >
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/title_activity_myaccount"
+                android:textColor="#f0c80c"
+                android:textSize="30sp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+        <TableRow
+            android:gravity="right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/myprofile" />
+        </TableRow>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FC0"
+        android:gravity="center" >
+        <TextView
+
+            android:id="@+id/lblMSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/lbl_footerline"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:background="@drawable/background"
+        android:gravity="center" >
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout
+                android:id="@+id/liner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TableLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+                    <TableRow
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile"
+                            android:layout_width="100dp"/>
+                        <TextView
+                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/lbl_myname"
+                            android:textColor="#ff3f3dff"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/lbl_emailid"
+                            android:textColor="#ff3f3dff"
+                            android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/txtemailidverify"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#ff1c1c1c"
+                            android:ems="10"
+                            android:background="@drawable/tblborder" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/errorstar"
+                            android:visibility="gone"
+                            android:textColor="#ffff110a"
+                            android:textSize="25sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/lbl_verificationcode"
+                            android:textColor="#ff3f3dff"
+                            android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/txtverificationcode"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ff1c1c1c"
+                            android:ems="10"
+                            android:background="@drawable/tblborder" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/errorstar"
+                            android:visibility="gone"
+                            android:textColor="#ffff110a"
+                            android:textSize="25sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/lbl_mobileno"
+                            android:textColor="#ff3f3dff"
+                            android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/txtmobilenoverify"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#ff1c1c1c"
+                            android:ems="10"
+                            android:background="@drawable/tblborder" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/errorstar"
+                            android:visibility="gone"
+                            android:textColor="#ffff110a"
+                            android:textSize="25sp" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/lbl_updatepassword"
+                            android:textColor="#ff3f3dff"
+                            android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/txtupdatepassword"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ff1c1c1c"
+                            android:ems="10"
+                            android:inputType="numberPassword"
+                            android:background="@drawable/tblborder" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:id="@+id/btnverify"
+                            android:layout_width="wrap_content"
+                            android:textColor="#fffbfdff"
+                            android:textStyle="bold"
+                            android:width="100dp"
+                            android:textSize="25sp"
+                            android:background="#ff3e92ff"
+                            android:text="@string/lbl_verify" />
+
+                    </TableRow>
+                </TableLayout>
+                <TableLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

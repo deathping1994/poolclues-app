@@ -1,0 +1,364 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="#08253c" >
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:text="@string/signup_header"
+                        android:textStyle="normal"
+                        android:layout_weight="1"
+                        android:textColor="#f0c80c"
+                        android:textSize="30sp"
+                        android:layout_height="fill_parent" />
+                </TableRow>
+                <TableRow
+                    android:gravity="right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                    <Button
+                        android:background="@null"
+                        android:drawableLeft="@drawable/signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#f0c80c"
+                        android:textStyle="bold" />
+                </TableRow>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FC0"
+        android:gravity="center" >
+        <TextView
+            android:id="@+id/lblmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/lbl_footerline"
+            android:textStyle="italic"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:background="@drawable/background"
+        android:layout_below="@id/header" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:id="@+id/liner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_myselfie"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <ImageButton
+                    android:background="@null"
+                    android:src="@drawable/instagram" />
+                </TableRow>
+        <TableRow
+            android:layout_marginLeft="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/lblfirstname"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_firstname"
+                android:textColor="#ff1429f0"
+                android:textSize="19sp" />
+            <EditText
+                android:id="@+id/txt_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#ff1c1c1c"
+                android:ems="10"
+                android:background="@drawable/tblborder" />
+
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_middlename"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_middlename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_lastname"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_emailid"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_emailid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_password"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_houseno"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_houseno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_street"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_city"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+        <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_state"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+        </TableRow>
+            <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_Country"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_couuntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_mobileno"
+                    android:textColor="#ff1429f0"
+                    android:textSize="19sp" />
+                <EditText
+                    android:id="@+id/txt_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="#ff1c1c1c"
+                    android:ems="10"
+                    android:background="@drawable/tblborder" />
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/btnsignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup_button"
+                    android:textColor="#fffbfdff"
+                    android:textStyle="bold"
+                    android:width="200dp"
+                    android:textSize="25sp"
+                    android:background="#ff3e92ff"
+                    android:layout_centerHorizontal="true" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

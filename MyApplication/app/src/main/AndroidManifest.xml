@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.poolclues.www.poolclues" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".signup"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".main"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".choosegift"
+            android:label="@string/title_activity_choosegift" >
+        </activity>
+        <activity
+            android:name=".single_grid"
+            android:label="@string/title_activity_single_grid" >
+        </activity>
+        <activity
+            android:name=".create_event"
+            android:label="@string/title_activity_create_event" >
+        </activity>
+        <activity
+            android:name=".myaccount"
+            android:label="@string/title_activity_myaccount" >
+        </activity>
+        <activity
+            android:name=".forgotpwd"
+            android:label="@string/title_activity_forgotpwd" >
+        </activity>
+        <activity
+            android:name=".mycreate_event"
+            android:label="@string/title_activity_mycreate_event" >
+        </activity>
+        <activity
+            android:name=".invitation"
+            android:label="@string/title_activity_invitation" >
+        </activity>
+        <activity
+            android:name=".mywallet"
+            android:label="@string/title_activity_mywallet" >
+        </activity>
+        <activity
+            android:name=".notification"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name=".groupcreate"
+            android:label="@string/title_activity_groupcreate" >
+        </activity>
+        <activity
+            android:name=".grouplist"
+            android:label="@string/title_activity_grouplist" >
+        </activity>
+    </application>
+
+</manifest>

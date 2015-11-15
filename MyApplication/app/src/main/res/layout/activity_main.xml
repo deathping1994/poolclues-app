@@ -1,0 +1,218 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:background="#08253c" >
+
+        <TableRow
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/lbl_welcome"
+                android:textColor="#f0c80c"
+                android:textSize="25sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lblwelcomeuser"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="#f0c80c"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lblauthtoken"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <Button
+                android:id="@+id/btnlogout"
+                android:background="@drawable/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="#f0c80c"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FC0"
+        android:gravity="center" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_margin="5dp"
+            android:text="@string/lbl_footerline"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:gravity="center" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+                <TableLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" >
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/btn_choosegift"
+                            style="@style/CustomStyleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/gift"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lbl_GiftBucket"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/btn_createevent"
+                            style="@style/CustomStyleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/event"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lbl_createevent"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/btn_contribute"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            style="@style/CustomStyleButton"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/contribute"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lbl_Contribute"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/btn_myselfie"
+                            style="@style/CustomStyleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/instagram"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lbl_selfie"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_invitefriend"
+                            style="@style/CustomStyleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/friends"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lbl_invitefriends"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_myprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/btn_style"
+                            style="@style/CustomStyleButton"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/myprofile"
+                            android:gravity="top|center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/title_activity_myaccount"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+                </TableLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
